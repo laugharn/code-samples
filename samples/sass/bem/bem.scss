@@ -1,0 +1,42 @@
+$accent: green;
+$primary: blue;
+$spacer: 16px;
+
+.List {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+
+    &__link {
+        color: $primary;
+        text-decoration: none;
+
+        &:hover {
+            color: $accent;
+        }
+
+        &.\--emphasis {
+            font-style: italic;
+        }
+
+        &.\--submit {
+            background-color: $primary;
+            color: white;
+
+            &:hover {
+                background-color: $accent;
+                color: white;
+            }
+        }
+    }
+
+    &__item {
+        &:not(:last-of-type) {
+            margin-right: $spacer;
+        }
+    }
+}
+
+.\+button {
+    padding: ($spacer / 2) $spacer;
+}
