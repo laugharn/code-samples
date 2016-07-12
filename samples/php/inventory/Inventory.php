@@ -84,7 +84,7 @@ class ApaiInventory implements Inventory
         $this->getLookup();
 
         $this->item = array_get($this->lookup, 'Items.Item', NULL);
-        return $item;
+        return $this;
     }
 
     /**
